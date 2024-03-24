@@ -6,13 +6,10 @@
     "esModuleInterop": true,
     "strict": true,
     "moduleResolution": "node",
-    // "noEmit": true,
-    // "types": ["jest"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    // "jsx": "react",
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "build", "dist", "rollup.config.js"]
+  "exclude": ["node_modules", "build", "dist"]
 }
