@@ -13,11 +13,6 @@
     // "jsx": "react",
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src",
-    "openapi",
-    "libs_types/openapi.d.ts",
-    "libs_types/cli-menu.d.ts"
-  ],
-  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
+  "include": ["src"],
+  "exclude": ["node_modules", "build", "dist", "rollup.config.js"]
 }
