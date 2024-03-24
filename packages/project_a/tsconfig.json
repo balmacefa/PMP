@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "target": "ESNext",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "strict": true,
+    "moduleResolution": "node",
+    // "noEmit": true,
+    // "types": ["jest"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    // "jsx": "react",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src",
+    "openapi",
+    "libs_types/openapi.d.ts",
+    "libs_types/cli-menu.d.ts"
+  ],
+  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
+}
