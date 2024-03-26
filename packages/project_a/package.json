@@ -1,5 +1,5 @@
 {
-  "name": "@balmacefa/function_tool_kit",
+  "name": "@balmacefa/PMP",
   "version": "2.1.1",
   "type": "commonjs",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "src"
   ],
   "scripts": {
-    "dev:node_ui": "env-cmd -e base,dev, tsx watch src/AUnify/NodeRunner.ts",
+    "dev": "env-cmd -e base,dev, -r .env-cmdrc.js  tsx watch src/index.ts",
     "lint": "eslint --cache --ext \".js,.ts,.tsx\" --report-unused-disable-directives src",
     "type-check": "tsc",
     "start:server": "node dist/server/index.js",
@@ -21,15 +21,9 @@
     "test-dev": "start-server-and-test 'tsx src/server' http-get://localhost:2022 'tsx src/client'",
     "test-start": "start-server-and-test 'node dist/server' http-get://localhost:2022 'node dist/client'"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {},
-  "pnpm": {
-    "patchedDependencies": {
-      "langchain@0.0.209": "patches/langchain@0.0.209.patch"
-    },
-    "overrides": {
-      "@langchain/core": "0.1.5"
-    }
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "env-cmd": "^10.1.0",
+    "tsx": "^4.7.1"
   }
 }
