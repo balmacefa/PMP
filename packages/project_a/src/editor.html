@@ -629,6 +629,7 @@ export const landing_html = /*html*/ `
         padding: 10px;
         border-radius: 5px;
         cursor: grab;
+        width: 200px;
       }
 
       .wbs-block h3 {
@@ -661,50 +662,62 @@ export const landing_html = /*html*/ `
     <div id="wbs-container-wrapper">
       <div class="wbs-section">
         <h1>IMOCA 60 RC WORK BREAKDOWN STRUCTURE</h1>
-        <div class="wbs-container">
-          <!-- Example Block -->
-          <div class="wbs-block" id="designBlock">
-            <h3>Design 1.1</h3>
-            <ul>
-              <li>1.1.1. IMOCA 60 design concept</li>
-              <li>1.1.2. Preliminary sketches</li>
-              <li>1.1.3. Finalized design</li>
-            </ul>
-          </div>
-          <!-- More blocks can be added here -->
-          <div class="wbs-block" id="manufacturingBlock">
-            <h3>Manufacturing 1.2</h3>
-            <ul>
-              <li>1.2.1. Frame construction</li>
-              <li>1.2.2. Hull and deck fabrication</li>
-              <li>1.2.3. Assembly</li>
-            </ul>
-          </div>
-          <div class="wbs-block" id="electronicsBlock">
-            <h3>Electronics 1.3</h3>
-            <ul>
-              <li>1.3.1. Component selection</li>
-              <li>1.3.2. Wiring and installation</li>
-              <li>1.3.3. Testing</li>
-            </ul>
-          </div>
-          <div class="wbs-block" id="riggingBlock">
-            <h3>Rigging 1.4</h3>
-            <ul>
-              <li>1.4.1. Mast and sail selection</li>
-              <li>1.4.2. Rigging installation</li>
-            </ul>
-          </div>
-          <div class="wbs-block" id="testingBlock">
-            <h3>Testing 1.5</h3>
-            <ul>
-              <li>1.5.1. Electronics testing</li>
-              <li>1.5.2. Sea trials</li>
-              <li>1.5.3. Final adjustments</li>
-            </ul>
-          </div>
+        <style>
+          .wbs-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+            padding: 10px;
+            overflow-x: auto;
+            resize: horizontal;
+            /* Added property for horizontal resizing */
+          }
+
+          /* Rest of the CSS code */
+        </style>
+        <!-- Example Block -->
+        <div class="wbs-block" id="designBlock">
+          <h3>Design 1.1</h3>
+          <ul>
+            <li>1.1.1. IMOCA 60 design concept</li>
+            <li>1.1.2. Preliminary sketches</li>
+            <li>1.1.3. Finalized design</li>
+          </ul>
+        </div>
+        <!-- More blocks can be added here -->
+        <div class="wbs-block" id="manufacturingBlock">
+          <h3>Manufacturing 1.2</h3>
+          <ul>
+            <li>1.2.1. Frame construction</li>
+            <li>1.2.2. Hull and deck fabrication</li>
+            <li>1.2.3. Assembly</li>
+          </ul>
+        </div>
+        <div class="wbs-block" id="electronicsBlock">
+          <h3>Electronics 1.3</h3>
+          <ul>
+            <li>1.3.1. Component selection</li>
+            <li>1.3.2. Wiring and installation</li>
+            <li>1.3.3. Testing</li>
+          </ul>
+        </div>
+        <div class="wbs-block" id="riggingBlock">
+          <h3>Rigging 1.4</h3>
+          <ul>
+            <li>1.4.1. Mast and sail selection</li>
+            <li>1.4.2. Rigging installation</li>
+          </ul>
+        </div>
+        <div class="wbs-block" id="testingBlock">
+          <h3>Testing 1.5</h3>
+          <ul>
+            <li>1.5.1. Electronics testing</li>
+            <li>1.5.2. Sea trials</li>
+            <li>1.5.3. Final adjustments</li>
+          </ul>
         </div>
       </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -713,11 +726,19 @@ export const landing_html = /*html*/ `
       // Define your breakpoints
       const breakpoints = {
         xs: 0,
+        xs2: 375,
         sm: 576,
+        sm2: 600,
         md: 768,
+        md2: 992,
         lg: 992,
+        lg2: 1200,
         xl: 1200,
-        xxl: 1400
+        xl2: 1400,
+        xl3: 1600,
+        xl4: 1800,
+        xl5: 2000
+
       };
 
       function getCurrentBreakpoint() {
@@ -735,13 +756,15 @@ export const landing_html = /*html*/ `
 
       $(function() {
         $(".wbs-block").draggable({
-          axis: "x",
           containment: "parent",
           grid: [50, 50],
           stop: function(event, ui) {
             const id = $(this).attr("id");
             const breakpoint = getCurrentBreakpoint();
-            $(this).data(`posX-${breakpoint}`, ui.position.left);
+            $(this).data('pos-' + breakpoint, {
+              x: ui.position.left,
+              y: ui.position.top
+            });
           }
         });
 
@@ -749,9 +772,12 @@ export const landing_html = /*html*/ `
           const breakpoint = getCurrentBreakpoint();
           $(".wbs-block").each(function() {
             const id = $(this).attr("id");
-            const posX = $(this).data(`posX-${breakpoint}`);
-            if (posX !== undefined) {
-              $(this).css('left', posX + 'px');
+            const pos = $(this).data('pos-' + breakpoint);
+            if (pos !== undefined) {
+              $(this).css({
+                left: pos.x + 'px',
+                top: pos.y + 'px'
+              });
             }
           });
         }
