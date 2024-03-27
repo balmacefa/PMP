@@ -39,15 +39,14 @@ Este Proyecto Busca crear un ecosistema open source con parte privada enterprise
 
 ---
 
-## C. Project Deliverables
+## C. Entregables del Proyecto
 
-- Dashboard Administrativo low code
-  - Crear paneles de vistas como strapi o payload cms, guardar y exportar a ambos configs (minor)
-- Pasarela de Pago Stripe
-- Multy language support with simply kafka, json rpc types common api
-- Manejo de Eventos, pilas de eventos.
-- Crear server y comuncarlos
-- Empresa en Europa
+Dashboard Administrativo Low Code: Creación de paneles al estilo de Strapi o Payload CMS, con opciones para guardar y exportar configuraciones.
+Pasarela de Pago Stripe.
+Soporte Multilenguaje: Integración con Kafka, JSON RPC y una API común de tipos.
+Manejo de Eventos: Implementación de colas de eventos.
+Servidores y Comunicación: Facilidades para la creación y comunicación entre servidores.
+Empresa en Europa.
 
 ---
 
@@ -83,14 +82,13 @@ Plataforma Multi lenguaje facil de comsumir mediante funciones y sus namespace
 <!-- color: rgb(75 85 99) -->
 <!-- White mode -->
 
-1. Business Case
+## Caso de Negocio
 
-- I have been in search for a new fun project. I'd like a project not only fun to build but also enjoy the final product once finished.
+Busco un proyecto nuevo y emocionante. Deseo que este proyecto no solo sea divertido de construir, sino que también disfrute del producto final una vez completado.
 
-- Building an Radio Controlled sailboat that I can sail over the weekends both in lakes and in sea conditions serve that objective.
-  In addition, it will equip me with new skills, including; design of hydrodynamics, etc.
+Construir un velero controlado por radio que pueda navegar los fines de semana, tanto en lagos como en condiciones marinas, cumple con este objetivo. Además, me dotará de nuevas habilidades, incluyendo diseño hidrodinámico.
 
-- Now, you need to give more details to the business case. Back it with research data if you can. Include interviews, subject matter expert opinions, and data to further justify your business case.
+Amplía el caso de negocio con datos de investigación, opiniones de expertos y datos adicionales que justifiquen aún más tu caso.
 
 ---
 
@@ -141,47 +139,55 @@ Plataforma Multi lenguaje facil de comsumir mediante funciones y sus namespace
 
 </br>
 
-# WBS - WORK BREAKDOWN STRUCTURE
+WBS - WORK BREAKDOWN STRUCTURE
 
-| Task ID | Task Description                | Level |
-| ------- | ------------------------------- | ----- |
-| 1.1     | IMOCA 60 design designed        | 1     |
-| 1.1.1   | 1.1.1. IMOCA 60 design designed | 2     |
-| 1.1.2   | 1.1.2 Design adjusted           | 2     |
-| 1.1.3   | 1.1.3 Final design completed    | 2     |
-| 1.2     | Manufacturing 1.2               | 1     |
-| 1.2.1   | Materials designed              | 2     |
-| 1.2.2   | Materials procured              | 2     |
-| 1.2.3   | Frames completed                | 2     |
-| 1.2.4   | Hull and Deck laminated         | 2     |
-| 1.2.5   | Cosmetics (Sanded & Primed)     | 2     |
-| 1.3     | Electronics 1.3                 | 1     |
-| 1.3.1   | Components decided and procured | 2     |
-| 1.3.2   | Components installed            | 2     |
-| 1.3.3   | Components tested               | 2     |
-| 1.4     | Rigging 1.4                     | 1     |
-| 1.4.1   | Components decided and procured | 2     |
-| 1.4.2   | Rig installed                   | 2     |
-| 1.5     | Testing 1.5                     | 1     |
-| 1.5.1   | Electronics tested              | 2     |
-| 1.5.2   | Rig tested                      | 2     |
-| 1.5.3   | Pool trial completed            | 2     |
-| 1.5.4   | Sea trial completed             | 2     |
+1. Desarrollo de la Plataforma
+   1.1 Diseño de la Arquitectura del Sistema
+   1.1.1 Definición de requisitos técnicos
+   1.1.2 Selección de tecnologías y herramientas
+   1.1.3 Diseño de la arquitectura de microservicios
+   1.2 Desarrollo del Core de la Plataforma
+   1.2.1 Implementación del @balmacefa/function_toolset
+   1.2.2 Integración con Kafka y JSON RPC
+   1.2.3 Desarrollo de la API común de tipos
+   1.3 Creación del Dashboard Administrativo Low Code
+   1.3.1 Diseño de UI/UX
+   1.3.2 Desarrollo de funcionalidades frontend
+   1.3.3 Implementación del backend para configuraciones
 
 ---
 
-# WBS - WORK BREAKDOWN STRUCTURE
+1.4 Implementación de la Pasarela de Pago Stripe
+1.4.1 Integración de la API de Stripe
+1.4.2 Pruebas de transacciones
+1.5 Soporte Multilenguaje y Manejo de Eventos
+1.5.1 Implementación de soporte multilenguaje
+1.5.2 Desarrollo de sistema de colas de eventos
 
-| Task ID | Task Description                | Start Date | End Date   |
-| ------- | ------------------------------- | ---------- | ---------- |
-| 1.1     | IMOCA 60 design designed        | 2022-01-01 | 2022-01-05 |
-| 1.2     | Materials designed              | 2022-01-06 | 2022-01-10 |
-| 1.3     | Components decided and procured | 2022-01-11 | 2022-01-15 |
-| 1.4     | Components decided and procured | 2022-01-16 | 2022-01-20 |
-| 1.5     | Electronics tested              | 2022-01-21 | 2022-01-25 |
-| 1.6     | Rig tested                      | 2022-01-26 | 2022-01-30 |
-| 1.7     | Pool trial completed            | 2022-01-31 | 2022-02-04 |
-| 1.8     | Sea trial completed             | 2022-02-05 | 2022-02-09 |
+2. Infraestructura y Despliegue
+   2.1 Configuración de Servidores
+   2.1.1 Selección y adquisición de servidores
+   2.1.2 Configuración de servidores y entornos de ejecución
+   2.2 Despliegue de la Plataforma
+   2.2.1 Automatización del despliegue continuo
+   2.2.2 Pruebas de carga y seguridad
+
+---
+
+3. Empresa y Legal
+   3.1 Constitución de la Empresa en Europa
+   3.1.1 Trámites legales y burocráticos
+   3.1.2 Establecimiento de la estructura empresarial
+4. Validación y Lanzamiento
+   4.1 Pruebas y Ajustes
+   4.1.1 Pruebas de usuario
+   4.1.2 Ajustes según feedback
+   4.1.3 Pruebas finales de integración y seguridad
+   4.2 Lanzamiento y Marketing
+   4.2.1 Plan de lanzamiento
+   4.2.2 Estrategias de marketing y promoción
+
+---
 
 ---
 
