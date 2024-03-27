@@ -5,101 +5,69 @@ marp: true
 # backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
-<!-- Dark mode -->
-<!-- Dark mode -->
+![bg left:40% 80%](https://www.pmi.org/assets/img/pmi-logo-default.svg)
 
-![bg left:40% 80%](https://iiresodh.org/contenido/uploads/2024/01/Logo-Simplificado_IIRESODH-980x300.png)
+# **PMP**
 
-# IIRESODH
+Fabián Balmaceda Rescia
 
-## SIAJ
+Plataforma Code as a Service
 
 ---
 
 <!-- White mode -->
 
 <!--
-header: "_IIRESODH_ | **SIAJ**"
 paginate: true
 backgroundColor: rgb(248 250 252) -->
-
 <!-- color: rgb(75 85 99) -->
 <!-- White mode -->
 
-# Declaración Alcance del Proyecto
+# Project-Scope-Statement
+
+## A. Project Justification
+
+Emplear plataforma de infraestructura a granescala como kafka es dificil, se procee con una capa simple de abdstraccion entre lenguajes y servdores, para microservicios.
+
+Siempre he querido tener una plataforma a largo plazo que sea su propio ecosistema, como lo es Blender como instituto,
 
 ---
 
-## A. Justificación del Proyecto
+## B. Project Scope
 
-El proyecto SIAJ surge de la necesidad de hacer la investigación jurídica y el litigio más accesibles y efectivos, especialmente en el contexto de los derechos humanos. Aprovechando la tecnología y la inteligencia artificial, el SIAJ proporcionará un asistente para realizar investigaciones jurídicas y ejecutar estrategias de litigio, empoderando así a individuos e instituciones en su búsqueda de justicia.
-
----
-
-## B. Alcance del Proyecto
-
-El sistema SIAJ incluirá una base de datos jurídica enfocada en derechos humanos, incorporando un tesauro, textos de recomendación y regulaciones. Su característica principal será un motor de búsqueda semántica capaz de procesar consultas en lenguaje natural y entregar información jurídica precisa. Esto se complementará con herramientas analíticas impulsadas por IA para asistir a los usuarios en la evaluación de casos, análisis de documentos y generación de respuestas estándar.
-
-Multiples fuentes [ver lista](https://docs.google.com/document/d/1j4x51C87NqNNmrmyIVQeSUAxUruLLkwybx1wQK-bWkE/edit?usp=sharing). Flujogramas, formularios y guía para trámites internacionales con modelos de denuncias.
+Este Proyecto Busca crear un ecosistema open source con parte privada enterprise, bajo el proyecto @balmacefa/funtion_toolset como legacy base code.
 
 ---
 
-### Componentes Clave:
+## C. Project Deliverables
 
-- **Base de Datos Jurídica**: Una colección integral de documentos legales, normas y jurisprudencias con enfoque en derechos humanos.
-- **Motor de Búsqueda Semántica**: Una herramienta de búsqueda avanzada capaz de entender y procesar consultas en lenguaje natural.
-- **Herramientas Analíticas con IA**: Características impulsadas por IA para análisis de documentos, evaluación de casos y respuestas de consulta automatizadas.
-
----
-
-## C. Entregables del Proyecto
-
-- **Sistema de Ingesta de Datos**:
-  Actualización continua desde múltiples fuentes.
-
-- **Base de Datos de Procedimientos Jurídicos**:
-  Incluye procedimientos, flujogramas, rutas de trabajo, guías, y jurisprudencia nacional e internacional.
-
-- **Flujogramas Interactivos**:
-  Guías visuales para navegación por procesos legales.
+- Dashboard Administrativo low code
+  - Crear paneles de vistas como strapi o payload cms, guardar y exportar a ambos configs (minor)
+- Pasarela de Pago Stripe
+- Multy language support with simply kafka, json rpc types common api
+- Manejo de Eventos, pilas de eventos.
+- Crear server y comuncarlos
+- Empresa en Europa
 
 ---
 
-- **Recomendación de Ensayos y Guías**:
-  Compilación de recursos educativos para profundizar en áreas del derecho.
+## D. Project Success Criteria
 
-- **Jurisprudencia Nacional e Internacional**:
-  Acceso a sentencias y precedentes relevantes.
-
-- **Chatbot con IA y Respuestas Estandarizadas**:
-  Asistencia inmediata y orientación a través de inteligencia artificial.
-
-- **Interfaz de Usuario**:
-  Plataforma intuitiva para fácil acceso a información y recursos.
+Contribuciones al opensource
+Pago de subscripciones
+Plataforma Multi lenguaje facil de comsumir mediante funciones y sus namespace
 
 ---
 
-## D. Criterios de Éxito del Proyecto
-
-- **Adopción del Usuario**:
-  Despliegue exitoso y uso activo del SIAJ por parte de profesionales legales y activistas de derechos humanos.
-- **Eficiencia en la Investigación**:
-  Reducción significativa en el tiempo requerido para la investigación legal y preparación de documentos de litigio.
-- **Competencia de Casos**:
-  Mejora en la calidad y efectividad de las estrategias de litigio desarrolladas usando el SIAJ.
-
----
-
+<!-- header: "**Project_name** | _label description_" -->
 <!-- Dark mode -->
 <!-- backgroundColor: rgb(75 85 99) -->
 <!-- color: rgb(248 250 252) -->
 <!-- Dark mode -->
 
----
-
 ![bg left:40% 80%](https://www.pmi.org/assets/img/pmi-logo-default.svg)
 
-# Documento de Requisitos del Proyecto
+# Project Requirements Document
 
 1. Business Case
 2. Project Objectives
@@ -115,7 +83,7 @@ Multiples fuentes [ver lista](https://docs.google.com/document/d/1j4x51C87NqNNmr
 <!-- color: rgb(75 85 99) -->
 <!-- White mode -->
 
-## 1. Business Case
+1. Business Case
 
 - I have been in search for a new fun project. I'd like a project not only fun to build but also enjoy the final product once finished.
 
@@ -126,26 +94,26 @@ Multiples fuentes [ver lista](https://docs.google.com/document/d/1j4x51C87NqNNmr
 
 ---
 
-## 2. Project Objectives
+2. Project Objectives
 
 - Create a radio controlled Imoca 60 replica, can be sailed in sea but also in lakes. It needs to be easy to transport and easy to assemble on the beach.
 
 ---
 
-## 3. Major Deliverables
+3. Major Deliverables
 
 - The hull, the deck, the mast, the keel, the rudder, the radio control unit and the sails.
 
 ---
 
-## 4. Roles & Responsibilities
+4. Roles & Responsibilities
 
 - Fabián Balmaceda Rescia: Project Manager, designer, builder, sailor.
 - My wife: Assistant project manager, assistant designer, assistant builder, assistant sailor.
 
 ---
 
-## 5. Stakeholders
+5. Stakeholders
 
 - Fabián Balmaceda Rescia
 - My wife
@@ -155,7 +123,7 @@ Multiples fuentes [ver lista](https://docs.google.com/document/d/1j4x51C87NqNNmr
 
 ---
 
-## 6. Assumptions
+6. Assumptions
 
 - I will have enough time to build the boat
 - I will have enough budget to build the boat
